@@ -1,0 +1,767 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: #b1da96
+	color: #fff
+
+input[type='number']
+	-moz-appearance: textfield
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+
+
+
+body
+	font-size: 15px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-color: #eee
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+button
+	outline: none!important
+
+main
+	max-width: 708px
+	height: auto
+	margin-top: 0
+	//margin-left: 150px
+	background-color: #fff
+	min-height: 100vh
+
+.hint
+	position: absolute
+	width: 20px
+	height: 20px
+	font-size: 16px
+	background-color: $accent-blue
+	border: none
+	outline: none
+	border-radius: 50%
+	color: #ffffff
+	line-height: 20px
+	text-align: center
+	padding: 0
+	cursor: pointer
+	&_blue
+		top: 50%
+		transform: translateY(-50%)
+		right: 20px
+	&_grey
+		position: relative
+		background-color: #9f9f9f
+		&:hover
+			background-color: #b6b6b6
+
+
+.label
+	font-size: 13px
+	font-weight: bold
+	line-height: 1.231
+	display: block
+
+.input
+	border: 1px solid rgb(164, 164, 164)
+	border-radius: 3px
+	font-size: 14px
+	line-height: 1.7
+	padding: 4px 0 4px 10px
+	width: 100%
+	color: $text
+	&_measure
+		padding-right: 30px
+
+
+select
+	color: $text
+	border: 1px solid rgb(164, 164, 164)
+	border-radius: 3px
+	font-size: 14px
+	line-height: 1.7
+	padding: 6px 0 4px 10px
+	width: 100%
+	min-height: 34px
+
+.topTitle
+	padding-top: 10px
+	font-size: 30px
+	line-height: 1
+	color: #000
+	font-family: $title-font
+	font-weight: 400
+	letter-spacing: 0.005em
+
+
+.topText
+	color: rgb(102, 102, 102)
+	line-height: 1.6
+	margin-top: 20px
+	letter-spacing: 0.002em
+	padding-bottom: 15px
+
+.secTitle
+	&__inner
+		position: relative
+	&__number
+		position: absolute
+		font-size: 30px
+		font-family: $title-font
+		background-color: $accent-blue
+		color: #fff
+		width: 63px
+		height: 63px
+		border-radius: 50%
+		z-index: 1
+		display: flex
+		align-items: center
+		justify-content: center
+		left: 0
+		top: -6px
+	&__title
+		margin-left: 20px
+		background-color: #003c78
+		height: 50px
+		p
+			font-family: $title-font
+			line-height: 1.583
+			font-size: 24px
+			color: #fff
+			line-height: 50px
+			padding-left: 70px
+			margin-bottom: 0
+			+media-breakpoint-down(xs)
+				font-size: 17px
+				padding-left: 55px
+
+.section1
+	padding-bottom: 55px
+
+.section1__houseChoice
+	margin-top: 37px
+	max-width: 708px
+	display: flex
+	justify-content: space-between
+	margin-bottom: 25px
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		align-items: center
+
+.houseChoiceBlock
+	width: 220px
+	height: 182px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-end
+	background-color: rgb(235, 235, 235)
+	position: relative
+	padding-bottom: 27px
+	cursor: pointer
+	margin-right: 5px
+	&:last-child
+		margin-right: 0
+	path
+		fill: $accent-orange
+	p
+		font-size: 15px
+		margin-bottom: 0
+		margin-top: 10px
+	img
+		position: absolute
+		top: 22px
+		right: 22px
+		display: none
+	&:hover
+		background-color: #d3d9df
+	&_active
+		background-color: $accent-orange
+		&:hover
+			background-color: $accent-orange
+		path
+			fill: #fff
+		p
+			color: #fff
+		img
+			display: block
+	+media-breakpoint-down(xs)
+		margin-right: 0
+		margin-bottom: 10px
+
+.section1__houseDetails
+	display: flex
+	+media-breakpoint-down(xs)
+		flex-direction: column
+
+.houseDetails__locationName
+	flex-grow: 1
+	input
+		width: 100%
+
+.houseDetails__distanceMKAD
+	width: 162px
+	margin-left: 14px
+	+media-breakpoint-down(xs)
+		margin-top: 10px
+		width: 100%
+		margin-left: 0
+
+.distanceMKAD__outer
+	position: relative
+	span
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 10px
+		font-size: 15px
+		color: rgb(102, 102, 102)
+
+.section__description
+	font-size: 15px
+	color: rgb(102, 102, 102)
+	line-height: 1.6
+
+.section2 .section__description
+	margin-top: 16px
+	margin-bottom: 20px
+
+.quickStep5
+	position: relative
+	&__inner
+		position: absolute
+		top: -10px
+		right: 0
+		text-align: right
+		font-size: 14px
+		p
+			color: #000
+			margin-bottom: 0
+			margin-bottom: -6px
+		a
+			color: #003c78
+			text-decoration: underline
+		+media-breakpoint-down(xs)
+			position: relative
+			text-align: center
+
+.floor
+
+	&__title
+		font-size: 20px
+		font-family: $title-font
+		margin-bottom: 10px
+
+.floor__room
+	background-color: #ebebeb
+
+.room__top
+	border-bottom: 1px solid #a4a4a4
+	display: flex
+
+.room__title
+	flex-grow: 1
+	border-right: 1px solid #a4a4a4
+	background: url('../img/edit.png') no-repeat 126px 50%
+	p
+		font-size: 18px
+		color: rgb(84, 160, 198)
+		font-weight: bold
+		margin: 0
+		padding: 7px 0 7px 30px
+
+.room__delete
+	padding: 0
+	border: none
+	outline: none
+	cursor: pointer
+	width: 52px
+	height: 43px
+	background: url('../img/delete.png') no-repeat 50% 50%
+
+.room__form
+	padding: 20px 30px 5px
+
+.roomForm__block
+	margin-bottom: 10px
+
+.roomForm__top
+	display: flex
+
+.selectCustomArrowOuter
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 20px
+		height: 32px
+		background: url('../img/arrow-down.png') no-repeat 50% 50%, #fff
+		position: absolute
+		right: 1px
+		bottom: 1px
+		border-radius: 3px
+		pointer-events: none
+
+.roomForm__purpose
+	flex-grow: 1
+
+.roomForm__area
+	width: 127px
+	margin-left: 9px
+	+media-breakpoint-down(xs)
+		width: 100%
+		margin-left: 0
+
+.roomForm__windows
+	width: 101px
+	margin-left: 9px
+	+media-breakpoint-down(xs)
+		width: 100%
+		margin-left: 0
+
+.roomForm__bottom
+	display: flex
+	justify-content: space-between
+
+.roomForm__warmFloor
+	display: flex
+	justify-content: space-between
+	width: 260px
+	+media-breakpoint-down(xs)
+		width: 100%
+		flex-direction: column
+
+
+.roomForm__areaWarmFloor
+	width: 90px
+	+media-breakpoint-down(xs)
+		width: 100%
+
+
+.roomForm__comfortWarmFloor
+	display: flex
+	padding-top: 24px
+	button
+		margin-left: 8px
+	label
+		margin-left: 14px
+		.checkbox-custom
+			margin-right: 9px
+		+media-breakpoint-down(xs)
+			width: 170px
+			margin-left: 0
+
+
+
+//Custom checkbox start
+.checkbox
+	display: none
+
+.checkbox-custom
+	position: relative
+	width: 20px
+	height: 20px
+	border: 1px solid rgb(164, 164, 164)
+	border-radius: 3px
+	float: left
+
+.checkbox-custom
+	display: inline-block
+
+.checkbox:checked + .checkbox-custom::before
+	content: ""
+	display: block
+	position: absolute
+	top: -1px
+	right: -1px
+	bottom: -1px
+	left: -1px
+	background: url('../img/check-s.png') no-repeat 50% 50%, #003c78
+	border: 1px solid #003c78
+	border-radius: 3px
+// Custom checkbox end
+
+.roomForm__radiatorHeating
+	display: flex
+	+media-breakpoint-down(xs)
+		width: 100%
+		flex-direction: column
+
+.roomForm__comfortRadiatorHeating
+	display: flex
+	padding-top: 24px
+	label
+		margin-left: 14px
+		margin-right: -15px
+		.checkbox-custom
+			margin-right: 9px
+		+media-breakpoint-down(xs)
+			margin-left: 0
+			width: 260px
+	+media-breakpoint-down(xs)
+		padding-top: 0
+
+.roomForm__radiatorHeatingChoice
+	&:after
+		bottom: 7px
+
+//Кнопки добавления помещения и этажа
+.section2__buttons
+	margin-top: 19px
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10px
+	+media-breakpoint-down(xs)
+		flex-direction: column
+
+.addPlacement
+	color: #fff
+	background-color: #54a0c6
+	font-size: 16px
+	font-family: $title-font
+	font-weight: bold
+	text-align: center
+	width: 49%
+	border: none
+	outline: none
+	padding-top: 12px
+	padding-bottom: 12px
+	border-radius: 3px
+	cursor: pointer
+	margin-bottom: 10px
+	&:hover
+		background-color: #408bb1
+	+media-breakpoint-down(xs)
+		width: 100%
+
+.pipeMaterial__form
+	width: 203px
+	padding-bottom: 34px
+	+media-breakpoint-down(xs)
+		width: 100%
+
+//Блок стоимости раздела
+.costBlock
+	display: flex
+	+media-breakpoint-down(xs)
+		flex-direction: column
+
+.costBlock__separately
+	background-color: #d3d9df
+	padding-left: 30px
+	padding-right: 30px
+	flex-grow: 1
+	padding-top: 15px
+	+media-breakpoint-down(xs)
+		padding-bottom: 15px
+
+.cbSeparately__title
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 14px
+	p
+		margin: 0
+		font-size: 20px
+		font-weight: bold
+		font-family: $title-font
+		color: rgb(0, 66, 125)
+
+.cbSeparately__position
+	display: flex
+
+.cbSeparately__name
+	margin-bottom: 0
+
+.cbSeparately__separator
+	margin-left: 10px
+	margin-right: 10px
+	flex-grow: 1
+	background: url('../img/separator.png') repeat-x 0 50%
+
+.cbSeparately__valueOuter
+	font-size: 16px
+	font-weight: bold
+
+.cbSeparately__value
+
+.costBlock__total
+	width: 155px
+	background-color: $accent-orange
+	color: #fff
+	text-align: center
+	padding-top: 43px
+	padding-bottom: 27px
+	+media-breakpoint-down(xs)
+		display: flex
+		width: 100%
+		align-items: center
+		padding-top: 20px
+		padding-bottom: 20px
+		padding-left: 30px
+
+.cbTotal__title
+	font-size: 16px
+	margin-bottom: 10px
+	+media-breakpoint-down(xs)
+		margin-bottom: 0
+		margin-right: 10px
+
+.cbTotal__total
+	font-size: 24px
+	font-weight: bold
+	line-height: 0.667
+	margin-bottom: 10px
+	+media-breakpoint-down(xs)
+		margin-bottom: 0
+		margin-right: 10px
+
+.cbTotal__measure
+	font-size: 20px
+	font-weight: bold
+	line-height: 0.8
+	+media-breakpoint-down(xs)
+		margin-bottom: 0
+
+
+//Блок "Заказать обратный звонок"
+.consultation
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-top: 36px
+	padding-bottom: 56px
+	p
+		font-size: 13px
+		font-weight: bold
+		margin: 0
+	&__button
+		background-color: $accent-blue
+		color: #fff
+		text-align: center
+		padding: 8px 16px
+		font-size: 14px
+		border-radius: 3px
+		border: none
+		outline: none
+		margin-left: 14px
+		cursor: pointer
+		&:hover
+			background-color: #408bb1
+
+//Секция 3, 34
+.section34__inner
+	margin-top: 42px
+
+.section34__choiceBlock
+	display: flex
+	margin-bottom: 22px
+	+media-breakpoint-down(xs)
+		flex-direction: column
+
+.choiceBlock__title
+	font-size: 13px
+	font-weight: bold
+	min-width: 212px
+	margin: 0
+	margin-top: 7px
+	line-height: 1.231
+	+media-breakpoint-down(xs)
+		margin-bottom: 5px
+
+.choiceBlock__content
+	flex-grow: 1
+	display: flex
+	justify-content: flex-start
+	flex-wrap: wrap
+
+.boilerChoice
+
+.boilerChoice__block
+	display: flex
+	margin-bottom: 10px
+	margin-right: 12px
+	&:nth-child(3n)
+		margin-right: 0
+
+
+.boilerChoice__checkbox
+	width: 44px
+	background-color: #d3d9df
+	border: none
+	outline: none
+	cursor: pointer
+	&:hover
+		background-color: #c0c8cf
+	&_active
+		background: url('../img/check-m.png') no-repeat center, $accent-orange
+		&:hover
+			background-color: $accent-orange
+
+.boilerChoice__definition
+	font-size: 15px
+	background-color: #ebebeb
+	display: flex
+	align-items: center
+	padding: 7px 11px
+	width: 113px
+
+.boilerList
+	flex-grow: 1
+
+.boilerList__block
+	display: flex
+	margin-bottom: 10px
+
+.boilerList__checkbox
+	min-width: 44px
+	background-color: #d3d9df
+	border: none
+	outline: none
+	cursor: pointer
+	&:hover
+		background-color: #c0c8cf
+	&_active
+		background: url('../img/check-m.png') no-repeat center, $accent-orange
+		&:hover
+			background-color: $accent-orange
+
+.boilerList__definition
+	flex-grow: 1
+	display: flex
+	justify-content: space-between
+	padding-left: 15px
+	padding-right: 25px
+	padding-top: 8px
+	padding-bottom: 8px
+	background-color: #ebebeb
+	line-height: 1.6
+	a
+		text-decoration: underline
+		color: $text
+
+.boilerList__price
+	min-width: 72px
+
+.orderChimneyCalculation
+	font-size: 14px
+	color: rgb(0, 60, 120)
+	text-decoration: underline
+	line-height: 1.143
+	margin-left: auto
+	margin-bottom: 3px
+
+.coaxComplect
+	margin-top: 15px
+	font-size: 12px
+	color: rgb(102, 102, 102)
+	line-height: 1.333
+	margin-bottom: 5px
+
+//Секция Итогов
+.results
+	background-color: #d3d9df
+	padding: 19px 29px 30px
+	&__title
+		font-size: 20px
+		font-family: $title-font
+		color: rgb(0, 66, 125)
+		font-weight: bold
+		line-height: 1.2
+		margin-bottom: 16px
+
+.results__inner
+
+.results__block
+	display: flex
+	margin-bottom: 3px
+
+
+.results__name
+	font-size: 16px
+	margin-bottom: 0
+
+
+
+.results__separator
+	margin-left: 10px
+	margin-right: 10px
+	flex-grow: 1
+	background: url('../img/separator.png') repeat-x 0 55%
+
+
+.results__value
+	font-size: 16px
+	font-weight: bold
+	margin-bottom: 0
+
+.results__typeOfChimney
+	display: flex
+	margin-bottom: 3px
+
+.typeOfChimney__title
+	display: flex
+	align-items: center
+	font-size: 16px
+	margin-bottom: 0
+	width: 145px
+	line-height: 1
+	border-right: 1px solid #93979c
+	background: url('../img/line.png') no-repeat 100% center
+
+.typeOfChimney__content
+	margin-left: 17px
+	flex-grow: 1
+
+.results__total
+	background-color: $accent-orange
+	padding: 21px 30px
+
+.resultsTotal__block
+	display: flex
+	justify-content: space-between
+	p
+		color: #ffffff
+		font-size: 16px
+		line-height: 1
+	&:last-child
+		p
+			font-size: 20px
+
+
+
+
+@import "media" // Always at the end
+
+
+
+

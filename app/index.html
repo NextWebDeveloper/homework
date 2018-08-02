@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Калькулятор отопления частного дома</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<!--<link rel="icon" href="img/favicon/favicon.ico">-->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<main>
+
+		<h1 class="topTitle">Калькулятор отопления частного дома</h1>
+		<p class="topText">
+			Предлагаем вашему вниманию калькулятор отопления, позволяющий по параметрам дома подобрать систему отопления, рассчитать стоимость оборудования и монтажа.  Вы также можете получить комментарий и консультацию инженера по выбранной вами системе отопления, скорректировать базовую смету под конкретные особенности вашего дома и сделать заказ на установку отопления под ключ.
+		</p>
+		<!--Секция №1-->
+		<section class="main__section section1">
+			<div class="secTitle">
+				<div class="secTitle__inner">
+					<div class="secTitle__number">1</div>
+					<div class="secTitle__title">
+						<p>Выберите количество этажей</p>
+					</div>
+					<button class="hint hint_blue" style="display: none">?</button>
+				</div>
+			</div>
+				<!--Одноэтажный дом-->
+				<div class="section1__houseChoice">
+					<div id="oneStoreyed" class="houseChoiceBlock">
+						<svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="76px" height="57px">
+							<path fill-rule="evenodd"
+										d="M67.717,29.727 C67.719,29.756 67.724,29.775 67.724,29.799 L67.724,54.660 C67.724,55.949 66.673,56.998 65.377,56.998 L9.944,56.998 C8.648,56.998 7.598,55.949 7.598,54.660 L7.598,29.799 C7.598,29.775 7.604,29.756 7.604,29.727 L0.001,29.718 L37.909,0.774 L75.322,29.718 L67.717,29.727 ZM45.745,28.288 L38.588,28.288 L38.588,35.430 L45.745,35.430 L45.745,28.288 ZM36.732,28.288 L29.577,28.288 L29.577,35.430 L36.732,35.430 L36.732,28.288 ZM36.732,37.623 L29.575,37.623 L29.575,44.764 L36.732,44.764 L36.732,37.623 ZM45.745,37.623 L38.588,37.623 L38.588,44.764 L45.745,44.764 L45.745,37.623 Z"/>
+						</svg>
+						<p>Одноэтажный</p>
+						<img src="img/check.png" alt="check">
+					</div>
+					<!--Двухэтажный дом-->
+					<div id="twoStoreyed" class="houseChoiceBlock">
+						<svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="76px" height="81px">
+							<path fill-rule="evenodd"
+										d="M75.352,29.397 L37.940,0.613 L0.032,29.397 L7.635,29.407 C7.635,29.435 7.628,29.454 7.628,29.478 L7.628,78.620 C7.628,79.902 8.679,80.944 9.975,80.944 L65.408,80.944 C66.704,80.944 67.754,79.902 67.754,78.620 L67.754,29.478 C67.754,29.454 67.749,29.435 67.748,29.407 L75.352,29.397 ZM29.607,27.976 L36.762,27.976 L36.762,35.078 L29.607,35.078 L29.607,27.976 ZM29.606,37.259 L36.762,37.259 L36.762,44.361 L29.606,44.361 L29.606,37.259 ZM36.764,70.924 L29.607,70.924 L29.607,63.823 L36.764,63.823 L36.764,70.924 ZM36.764,61.642 L29.609,61.642 L29.609,54.539 L36.764,54.539 L36.764,61.642 ZM38.618,27.976 L45.775,27.976 L45.775,35.078 L38.618,35.078 L38.618,27.976 ZM38.618,37.259 L45.775,37.259 L45.775,44.361 L38.618,44.361 L38.618,37.259 ZM45.777,70.924 L38.620,70.924 L38.620,63.823 L45.777,63.823 L45.777,70.924 ZM45.777,61.642 L38.620,61.642 L38.620,54.539 L45.777,54.539 L45.777,61.642 Z"/>
+						</svg>
+						<p>Двухэтажный</p>
+						<img src="img/check.png" alt="check">
+					</div>
+					<!--Трёхэтажный дом-->
+					<div id="threeStoreyed" class="houseChoiceBlock">
+						<svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="76px" height="106px">
+							<path fill-rule="evenodd"
+										d="M75.998,28.989 L38.586,-0.006 L0.678,28.989 L8.281,28.998 C8.281,29.027 8.274,29.046 8.274,29.070 L8.274,103.659 C8.274,104.949 9.325,106.000 10.621,106.000 L66.054,106.000 C67.350,106.000 68.400,104.949 68.400,103.659 L68.400,29.070 C68.400,29.046 68.396,29.027 68.394,28.998 L75.998,28.989 ZM30.253,27.556 L37.409,27.556 L37.409,34.712 L30.253,34.712 L30.253,27.556 ZM30.252,36.908 L37.409,36.908 L37.409,44.061 L30.252,44.061 L30.252,36.908 ZM37.410,96.045 L30.253,96.045 L30.253,88.891 L37.410,88.891 L37.410,96.045 ZM37.410,86.694 L30.255,86.694 L30.255,79.540 L37.410,79.540 L37.410,86.694 ZM37.410,70.818 L30.253,70.818 L30.253,63.665 L37.410,63.665 L37.410,70.818 ZM37.410,61.468 L30.255,61.468 L30.255,54.313 L37.410,54.313 L37.410,61.468 ZM39.264,27.556 L46.421,27.556 L46.421,34.712 L39.264,34.712 L39.264,27.556 ZM39.264,36.908 L46.421,36.908 L46.421,44.061 L39.264,44.061 L39.264,36.908 ZM46.423,96.045 L39.266,96.045 L39.266,88.891 L46.423,88.891 L46.423,96.045 ZM46.423,86.694 L39.266,86.694 L39.266,79.540 L46.423,79.540 L46.423,86.694 ZM46.423,70.818 L39.266,70.818 L39.266,63.665 L46.423,63.665 L46.423,70.818 ZM46.423,61.468 L39.266,61.468 L39.266,54.313 L46.423,54.313 L46.423,61.468 Z"/>
+						</svg>
+						<p>Трёхэтажный</p>
+						<img src="img/check.png" alt="check">
+					</div>
+
+				</div>
+				<!--Форма "название объекта" и "удалённость от МКАД"-->
+				<form action="#" class="section1__houseDetails">
+					<div class="houseDetails__locationName">
+						<label class="label" for="locationName">Название объекта</label>
+						<input type="text" class="input" id="locationName">
+					</div>
+					<div class="houseDetails__distanceMKAD">
+						<label for="distanceMKAD" class="label">Удалённость от МКАД</label>
+						<div class="distanceMKAD__outer">
+							<input type="number" class="input input_measure" id="distanceMKAD">
+							<span>км</span>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</section>
+		<!--Секция №2-->
+		<section class="main__section section2">
+			<div class="secTitle">
+				<div class="secTitle__inner">
+					<div class="secTitle__number">2</div>
+					<div class="secTitle__title">
+						<p>Конфигурация</p>
+					</div>
+					<button class="hint hint_blue" style="display: none">?</button>
+				</div>
+			</div>
+			<p class="section__description">
+				Для расчета системы отопления введите параметры комнат. Добавляйте комнаты и этажи при помощи кнопок “Добавить помещение” и “Добавить этаж”
+			</p>
+			<div class="quickStep5">
+				<div class="quickStep5__inner">
+					<p>Не хотите заморачиваться?</p>
+					<a href="#">Отправьте нам поэтажный план и мы все посчитаем!</a>
+				</div>
+			</div>
+			<!--Блок этажа-->
+			<div class="floor">
+				<h3 class="floor__title">
+					Этаж <span>1</span>
+				</h3>
+				<!--Блок комнаты-->
+				<div class="floor__room">
+					<!--Номер комнаты и кнопка удалить-->
+					<div class="room__top">
+						<div class="room__title">
+							<p>Комната <span>1</span></p>
+						</div>
+						<button class="room__delete">
+						</button>
+					</div>
+					<!--Форма выбора параметров комнаты-->
+					<form action="#" class="room__form">
+						<div class="roomForm__top">
+							<!--Назначение комнаты-->
+							<div class="roomForm__purpose roomForm__block selectCustomArrowOuter">
+								<label class="label" for="roomPurpose">Назначение</label>
+								<select name="roomPurpose" id="roomPurpose">
+									<option value="Кухня">Кухня</option>
+									<option value="Прихожая">Прихожая</option>
+									<option value="Спальня">Спальня</option>
+									<option value="Гостиная">Гостиная</option>
+									<option value="Ванная">Ванная комната</option>
+								</select>
+							</div>
+							<!--Площадь помещения-->
+							<div class="roomForm__area roomForm__block">
+								<label for="roomArea" class="label">Площадь помещения</label>
+								<div class="distanceMKAD__outer">
+									<input type="number" class="input input_measure" id="roomArea">
+									<span>м<sup>2</sup></span>
+								</div>
+							</div>
+							<!--Количество окон-->
+							<div class="roomForm__windows roomForm__block">
+								<label class="label" for="roomWindows">Количество окон</label>
+								<input type="text" class="input" id="roomWindows">
+							</div>
+
+						</div>
+
+						<div class="roomForm__bottom">
+							<!--Тёплый пол-->
+							<div class="roomForm__warmFloor roomForm__block">
+								<div class="roomForm__areaWarmFloor">
+									<label for="areaWarmFloor" class="label">Тёплый пол</label>
+									<div class="distanceMKAD__outer">
+										<input type="number" class="input input_measure" id="areaWarmFloor">
+										<span>м<sup>2</sup></span>
+									</div>
+								</div>
+								<div class="roomForm__comfortWarmFloor">
+
+									<label for="comfortWarmFloor">
+										<input class="checkbox" type="checkbox" id="comfortWarmFloor">
+										<span class="checkbox-custom"></span>
+										<span class="label">Комфорт тёплого пола</span>
+									</label>
+									<button class="hint hint_grey">?</button>
+								</div>
+							</div>
+							<!--Радиаторное отопление-->
+							<div class="roomForm__radiatorHeating">
+								<div class="roomForm__radiatorHeatingChoice roomForm__block selectCustomArrowOuter">
+									<label class="label" for="radiatorHeatingChoice">Радиаторное отопление</label>
+									<select name="radiatorHeatingChoice" id="radiatorHeatingChoice">
+										<option value="Нет">Нет</option>
+										<option value="Да">Да</option>
+									</select>
+								</div>
+
+								<div class="roomForm__comfortRadiatorHeating">
+									<label for="comfortRadiatorHeating">
+										<input class="checkbox" type="checkbox" id="comfortRadiatorHeating">
+										<span class="checkbox-custom"></span>
+										<span class="label">Комфорт радиаторного отопления</span>
+									</label>
+									<button class="hint hint_grey">?</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--Кнопки добавления помещения и этажа-->
+			<div class="section2__buttons">
+				<button class="addPlacement" id="addRoom">+ Добавить помещение</button>
+				<button class="addPlacement" id="addFloor">+ Добавить этаж</button>
+			</div>
+			<!--Форма выбора материала труб тёплого пола-->
+			<form action="#" class="pipeMaterial__form">
+				<div class="selectCustomArrowOuter">
+					<label class="label" for="pipeMaterial">Материал труб теплых полов</label>
+					<select name="pipeMaterial" id="pipeMaterial">
+						<option value="Металлопласт">Металлопласт</option>
+						<option value="Металлопласт">Металлопласт</option>
+						<option value="Металлопласт">Металлопласт</option>
+					</select>
+				</div>
+			</form>
+			<!--Блок стоимость-->
+			<div class="costBlock">
+				<div class="costBlock__separately">
+					<div class="cbSeparately__title">
+						<p>Стоимость</p>
+						<button class="hint hint_grey">?</button>
+					</div>
+					<div class="cbSeparately__position">
+						<p class="cbSeparately__name">
+							Комплект теплого пола
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span data-pos-cost="20000" class="cbSeparately__value">20000</span> руб.
+						</div>
+					</div>
+					<div class="cbSeparately__position">
+						<p class="cbSeparately__name">
+							Комплект радиаторного отопления
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span class="cbSeparately__value" data-pos-cost="67000">67000</span> руб.
+						</div>
+					</div>
+					<div class="cbSeparately__position">
+						<p class="cbSeparately__name">
+							Монтаж
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span class="cbSeparately__value sec-instal-value" data-pos-cost="70000">70000</span> руб.
+						</div>
+					</div>
+				</div>
+				<!--Итоговая стоимость-->
+				<div class="costBlock__total">
+					<p class="cbTotal__title">ИТОГО:</p>
+					<p class="cbTotal__total thousands-separator" data-total-price="">157000</p>
+					<p class="cbTotal__measure">руб.</p>
+				</div>
+
+			</div>
+			<!--Блок "Заказать обратный звонок"-->
+			<div class="consultation">
+				<p>Консультация инженера:</p>
+				<button class="consultation__button">
+					Заказать обратный звонок
+				</button>
+			</div>
+		</section>
+
+		<!--Секция №3-->
+		<section class="main__section section3 section34">
+			<div class="secTitle">
+				<div class="secTitle__inner">
+					<div class="secTitle__number">3</div>
+					<div class="secTitle__title">
+						<p>Горячее водоснабжение</p>
+					</div>
+					<button class="hint hint_blue">?</button>
+				</div>
+			</div>
+
+			<div class="section34__inner">
+				<!--Блок выбора бойлера-->
+				<div class="section34__choiceBlock">
+					<p class="choiceBlock__title">
+						Бойлер
+					</p>
+					<div class="choiceBlock__content boilerChoice">
+						<div class="boilerChoice__block">
+							<button class="boilerChoice__checkbox"></button>
+							<div class="boilerChoice__definition">
+								100 литров
+							</div>
+						</div>
+						<div class="boilerChoice__block">
+							<button class="boilerChoice__checkbox"></button>
+							<div class="boilerChoice__definition">
+								200 литров
+							</div>
+						</div>
+						<div class="boilerChoice__block">
+							<button class="boilerChoice__checkbox"></button>
+							<div class="boilerChoice__definition">
+								300 литров
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section34__choiceBlock" style="margin-bottom: 22px;">
+					<p class="choiceBlock__title">
+						Список рекомендованных <br> моделей
+					</p>
+					<div class="boilerList">
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Гризли 100 KLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Vaillant ecoVIT VKK INT 656/4</a>
+								<div class="boilerList__price">
+									<span>43000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Гризли 100 KLO</a>
+								<div class="boilerList__price">
+									<span>37000</span> руб.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Блок стоимость-->
+			<div class="costBlock">
+				<div class="costBlock__separately">
+					<div class="cbSeparately__title">
+						<p>Стоимость</p>
+						<button class="hint hint_grey">?</button>
+					</div>
+					<div class="cbSeparately__position">
+						<p class="cbSeparately__name">
+							Бойлер
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span data-pos-cost="20000" class="cbSeparately__value">20000</span> руб.
+						</div>
+					</div>
+					<div class="cbSeparately__position">
+						<p class="cbSeparately__name">
+							Обвязка бойлера
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span class="cbSeparately__value" data-pos-cost="67000">67000</span> руб.
+						</div>
+					</div>
+					<div class="cbSeparately__position">
+						<p class="cbSeparately__name">
+							Монтаж
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span class="cbSeparately__value sec-instal-value" data-pos-cost="70000">8000</span> руб.
+						</div>
+					</div>
+				</div>
+				<!--Итоговая стоимость-->
+				<div class="costBlock__total">
+					<p class="cbTotal__title">ИТОГО:</p>
+					<p class="cbTotal__total thousands-separator" data-total-price="">157000</p>
+					<p class="cbTotal__measure">руб.</p>
+				</div>
+
+			</div>
+			<!--Блок "Заказать обратный звонок"-->
+			<div class="consultation">
+				<p>Консультация инженера:</p>
+				<button class="consultation__button">
+					Заказать обратный звонок
+				</button>
+			</div>
+		</section>
+
+		<!--Секция №4-->
+		<section class="main__section section4 section34">
+			<div class="secTitle">
+				<div class="secTitle__inner">
+					<div class="secTitle__number">4</div>
+					<div class="secTitle__title">
+						<p>Котёл отопления</p>
+					</div>
+					<button class="hint hint_blue">?</button>
+				</div>
+			</div>
+
+			<div class="section34__inner">
+				<!--Блок выбора бренда котла отопления-->
+				<div class="section34__choiceBlock">
+					<div class="choiceBlock__title">
+						Топливо
+						<button class="hint hint_grey">?</button>
+					</div>
+					<div class="choiceBlock__content boilerChoice">
+						<div class="boilerChoice__block">
+							<button class="boilerChoice__checkbox"></button>
+							<div class="boilerChoice__definition">
+								Газ
+							</div>
+						</div>
+						<div class="boilerChoice__block">
+							<button class="boilerChoice__checkbox"></button>
+							<div class="boilerChoice__definition">
+								Дизель
+							</div>
+						</div>
+						<div class="boilerChoice__block">
+							<button class="boilerChoice__checkbox"></button>
+							<div class="boilerChoice__definition">
+								Иное
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section34__choiceBlock">
+					<p class="choiceBlock__title">
+						Бренд
+					</p>
+					<div class="choiceBlock__content boilerChoice">
+						<div class="boilerChoice__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerChoice__definition">
+								Buderus
+							</div>
+						</div>
+						<div class="boilerChoice__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerChoice__definition">
+								Vaillant
+							</div>
+						</div>
+						<div class="boilerChoice__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerChoice__definition">
+								Baxi
+							</div>
+						</div>
+						<div class="boilerChoice__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerChoice__definition">
+								Protherm
+							</div>
+						</div>
+						<div class="boilerChoice__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerChoice__definition">
+								Иное
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section34__choiceBlock" style="margin-bottom: 22px;">
+					<p class="choiceBlock__title">
+						Список рекомендованных <br> моделей
+					</p>
+					<div class="boilerList">
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Медведь 20 PLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Vaillant ecoCOMPACT VSC 266/4-5 150</a>
+								<div class="boilerList__price">
+									<span>43000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Baxi SLIM 2.300 i - напольный газовый котел 30 кВт со встроенным бойлером 50 л</a>
+								<div class="boilerList__price">
+									<span>37000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Медведь 20 PLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Блок стоимость-->
+			<div class="costBlock">
+				<div class="costBlock__separately">
+					<div class="cbSeparately__title">
+						<p>Стоимость</p>
+						<button class="hint hint_grey">?</button>
+					</div>
+					<div class="cbSeparately__position">
+						<p class="cbSeparately__name">
+							Котёл
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span data-pos-cost="20000" class="cbSeparately__value">120000</span> руб.
+						</div>
+					</div>
+					<div class="cbSeparately__position">
+						<p class="cbSeparately__name">
+							Обвязка котла
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span class="cbSeparately__value" data-pos-cost="67000">17000</span> руб.
+						</div>
+					</div>
+					<div class="cbSeparately__position" style="margin-bottom: 0";>
+						<p class="cbSeparately__name">
+							Дымоход***
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span class="cbSeparately__value">отдельно</span> руб.
+						</div>
+					</div>
+					<div class="cbSeparately__position">
+						<a href="#" class="orderChimneyCalculation">Заказать расчёт</a>
+					</div>
+					<div class="cbSeparately__position" style="margin-bottom: 10px;">
+						<p class="cbSeparately__name">
+							Монтаж
+						</p>
+						<div class="cbSeparately__separator"></div>
+						<div class="cbSeparately__valueOuter">
+							<span class="cbSeparately__value sec-instal-value" data-pos-cost="70000">20000</span> руб.
+						</div>
+					</div>
+				</div>
+				<!--Итоговая стоимость-->
+				<div class="costBlock__total">
+					<p class="cbTotal__title">ИТОГО:</p>
+					<p class="cbTotal__total thousands-separator" data-total-price="">157000</p>
+					<p class="cbTotal__measure">руб.</p>
+				</div>
+
+			</div>
+			<!--Блок "Заказать обратный звонок"-->
+			<p class="coaxComplect">***Коаксиальный комплект по умолчанию (для настенных газовых котлов). Другие типы дымоходов рассчитываются отдельно</p>
+			<div class="consultation">
+				<p>Консультация инженера:</p>
+				<button class="consultation__button">
+					Заказать обратный звонок
+				</button>
+			</div>
+		</section>
+		
+		<section class="results">
+			<h3 class="results__title">Итоги</h3>
+			<div class="results__inner">
+				<div class="results__block">
+					<p class="results__name">Название объекта</p>
+					<div class="results__separator"></div>
+					<p class="results__value">Дача Абрамцево</p>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Этажность</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Общая площадь помещений, м2</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Теплые полы, м2</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Радиаторы отопления, секций</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Тип ГВС</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Объем бойлера, л</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Модель бойлера</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+
+				<div class="results__typeOfChimney">
+					<div class="typeOfChimney__title">
+						Тип котла <br>отопления
+					</div>
+					<div class="typeOfChimney__content">
+						<div class="results__block">
+							<p class="results__name">расположение</p>
+							<div class="results__separator"></div>
+							<p class="results__value">2</p>
+						</div>
+						<div class="results__block">
+							<p class="results__name">топливо</p>
+							<div class="results__separator"></div>
+							<p class="results__value">2</p>
+						</div>
+						<div class="results__block">
+							<p class="results__name">контуры</p>
+							<div class="results__separator"></div>
+							<p class="results__value">2</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="results__block">
+					<p class="results__name">Мощность котла отопления, кВт</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Модель котла</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block" style="margin-bottom: 0;">
+					<p class="results__name">Дымоход</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+				<div class="results__block">
+					<a href="#" class="orderChimneyCalculation">Заказать расчёт</a>
+				</div>
+				<div class="results__block">
+					<p class="results__name">Удаленность от МКАД, км</p>
+					<div class="results__separator"></div>
+					<p class="results__value">2</p>
+				</div>
+			</div>
+
+			</div>
+		</section>
+		<div class="results__total">
+			<div class="resultsTotal__block">
+				<p>Система отопления: стоимость оборудования</p>
+				<p><span>500</span> руб.</p>
+			</div>
+			<div class="resultsTotal__block">
+				<p>Система отопления: стоимость монтажа</p>
+				<p><span></span> руб.</p>
+			</div>
+			<div class="resultsTotal__block">
+				<p>Система отопления:  итоговая цена</p>
+				<p><span></span> руб.</p>
+			</div>
+		</div>
+		<!--Блок "Заказать обратный звонок"-->
+		<div class="consultation">
+			<p>Консультация инженера:</p>
+			<button class="consultation__button">
+				Заказать обратный звонок
+			</button>
+		</div>
+	</main>
+
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
+
