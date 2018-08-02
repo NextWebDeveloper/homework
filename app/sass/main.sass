@@ -749,19 +749,92 @@ select
 .resultsTotal__block
 	display: flex
 	justify-content: space-between
+	margin-bottom: 10px
 	p
 		color: #ffffff
 		font-size: 16px
 		line-height: 1
+		margin-bottom: 0
+		&:first-child
+			margin-bottom: 3px
 	&:last-child
 		p
 			font-size: 20px
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		
+// Форма в блоке Реализации
+.realisation__form
+	margin-top: 20px
 
+.realisation__contacts
+	display: flex
+	& > div
+		flex-grow: 1
+		margin-right: 10px
+		&:last-child	
+			margin-right: 0
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		& > div
+			margin-right: 0
 
+.realisation__block
+	margin-bottom: 15px
+
+.realisation__comment
+	textarea
+		height: 140px
+
+.realisation__send
+	background-color: $accent-orange
+	color: #fff
+	font-size: 14px
+	padding: 8px 14px
+	cursor: pointer
+	border-radius: 3px
+	border: none
+
+.bottomText
+	font-size: 13px
+	font-weight: bold
+	line-height: 1.231
+	margin-top: 20px
+	padding-bottom: 40px
+	span
+		font-size: 20px
+		font-weight: bold
+		line-height: 1.2
+		color: rgb(84, 160, 198)
+		white-space: nowrap
+		
+// Скрытые блоки подсказок
+.hiddenAdviceBlock
+	border-radius: 3px
+	width: 500px
+	max-height: 538px
+	&__title
+		font-family: $title-font
+		font-weight: bold
+		color: #000
+		font-size: 20px
+	&__text
+		color: $text
+	
+::-webkit-scrollbar
+  width: 13px
+ 
+::-webkit-scrollbar-track
+  -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.3)
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb
+    border-radius: 10px
+    -webkit-box-shadow: inset 0 0 50px rgba(45,125,200,1)
+
+::-webkit-scrollbar-thumb:hover
+   -webkit-box-shadow: inset 0 0 50px rgba(45,125,200,1)
 
 
 @import "media" // Always at the end
-
-
-
 

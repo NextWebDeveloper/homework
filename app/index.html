@@ -24,6 +24,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/fancybox/dist/jquery.fancybox.min.css">
 
 </head>
 
@@ -700,11 +701,71 @@
 				Заказать обратный звонок
 			</button>
 		</div>
+
+		<section class="realisation section5">
+			<div class="secTitle">
+				<div class="secTitle__inner">
+					<div class="secTitle__number">5</div>
+					<div class="secTitle__title">
+						<p>Реализация</p>
+					</div>
+					<button data-fancybox data-src="#hidden-content" href="javascript:;" class="hint hint_blue">?</button>
+				</div>
+			</div>
+			<form action="#" class="realisation__form">
+				<div class="realisation__files realisation__block">
+					<label class="label">Поэтажный план</label>
+					<input type="text" class="input">
+				</div>
+				<div class="realisation__contacts">
+					<div class="realisation__contactPhone realisation__block">
+						<label class="label" for="contactPhone">Контактный телефон</label>
+						<input type="text" class="input" id="contactPhone">
+					</div>
+					<div class="realisation__Email realisation__block">
+						<label class="label" for="Email">E-mail</label>
+						<input type="text" class="input" id="Email">
+					</div>
+					<div class="realisation__Name realisation__block">
+						<label class="label" for="Name">Имя</label>
+						<input type="text" class="input" id="Name">
+					</div>
+				</div>
+				<div class="realisation__address realisation__block">
+					<label class="label" for="address">Адрес объекта</label>
+					<input type="text" class="input" id="address">
+				</div>
+				<div class="realisation__comment realisation__block">
+					<label class="label" for="comment">Комментарий</label>
+					<textarea class="input" id="comment"></textarea>
+				</div>
+				<input type="submit" class="realisation__send" value="Отправить">
+			</form>
+			</section>
+			<p class="bottomText">
+					Для индивидуального и более точного расчета свяжитесь с нами по телефону <span>+7 (495) 108-07-93</span>
+			</p>
 	</main>
 
+	<!-- Hidden advice blocks -->
+	<div style="display: none;" class="hiddenAdviceBlock" id="hidden-content">
+		<h5 class="hiddenAdviceBlock__title">Hello</h5>
+		<p class="hiddenAdviceBlock__text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati molestiae, nihil porro veritatis laborum voluptate ipsa repellat maiores ducimus inventore ipsum error modi, suscipit voluptas itaque asperiores ab esse dolores expedita saepe doloribus? Unde temporibus iste maiores quo consequatur enim saepe optio voluptatem, porro, totam hic veritatis repudiandae mollitia exercitationem facilis doloribus. Dolorum earum fugiat ipsam sunt qui? Eveniet deleniti perspiciatis a praesentium assumenda corrupti inventore laboriosam perferendis et, error incidunt asperiores voluptates atque mollitia, blanditiis animi debitis ipsa, alias natus unde eaque. Esse molestiae magni repudiandae neque impedit. Inventore veniam id dicta architecto dolorum cumque beatae eligendi officiis doloremque quod suscipit nihil, facilis consequatur quas accusamus quos ipsa expedita corrupti ipsum? Nulla temporibus repellat modi assumenda inventore reiciendis, magni minima quia quasi deserunt. Eveniet quae odit magni facere iste quaerat laudantium nobis qui voluptate. Eaque, voluptatibus soluta placeat, dicta hic saepe accusantium nihil cumque laboriosam a earum repudiandae ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur id debitis ad voluptate similique dolore? Nam suscipit reiciendis consequuntur quae magnam! Porro ab minima delectus voluptatem ducimus quisquam velit quod iste, pariatur temporibus deleniti quos in, cupiditate, eveniet tempora ullam dicta? Voluptates mollitia excepturi, asperiores placeat sint totam blanditiis vero. </p>
+	</div>
 
-	<script src="js/scripts.min.js"></script>
-
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
+	<script src="js/scripts.min.js/script"></script>
 </body>
 </html>
 
+<!-- <script>
+	function cloneFloor() {
+	var parent = document.getElementById('parent');
+	var elem = document.getElementById('block');
+	console.log(elem.innerHTML);
+
+	var clone = elem.cloneNode(true);
+	parent.appendChild(clone);
+}
+</script> -->
