@@ -641,6 +641,9 @@ select
 .boilerList__block
 	display: flex
 	margin-bottom: 10px
+	overflow: hidden
+	height: auto
+	transition: all 1s ease
 
 .boilerList__checkbox
 	min-width: 44px
@@ -807,34 +810,83 @@ select
 		line-height: 1.2
 		color: rgb(84, 160, 198)
 		white-space: nowrap
-		
+
+// Кнопка Показать ещё
+.showMore
+	font-size: 14px
+	color: rgb(0, 60, 120)
+	background-color: transparent
+	border: none
+	line-height:
+	cursor: pointer
+	text-decoration: underline dashed
+	display: block
+	margin: 0 auto 15px
+	display: none
+
 // Скрытые блоки подсказок
 .hiddenAdviceBlock
 	border-radius: 3px
 	width: 500px
-	max-height: 538px
+	max-height: 538px !important
+	padding-top: 30px !important
+	padding-bottom: 30px !important
 	&__title
 		font-family: $title-font
 		font-weight: bold
 		color: #000
 		font-size: 20px
 	&__text
-		color: $text
-	
-::-webkit-scrollbar
-  width: 13px
- 
-::-webkit-scrollbar-track
-  -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.3)
-  border-radius: 10px
+		color: rgb(102, 102, 102)
+		line-height: 1.6
+		margin-bottom: 0
 
-::-webkit-scrollbar-thumb
-    border-radius: 10px
-    -webkit-box-shadow: inset 0 0 50px rgba(45,125,200,1)
+.fancybox-close-small
+	color: #00427d !important
 
-::-webkit-scrollbar-thumb:hover
-   -webkit-box-shadow: inset 0 0 50px rgba(45,125,200,1)
+//Блок добавления файлов
+.addFilesButton
+	font-size: 14px
+	color: rgb(255, 255, 255)
+	background-color: $accent-blue
+	border-radius: 3px
+	padding-left: 22px
+	padding-right: 22px
+	border: none
+	display: flex
+	align-items: center
+	height: 50px
+	cursor: pointer
 
+.filesOuter
+	display: flex
+	flex-wrap: wrap
+
+#files
+	display: flex
+	flex-wrap: wrap
+
+.userFile
+	display: flex
+	cursor: pointer
+	margin-right: 10px
+	margin-bottom: 10px
+
+.nameFile
+	background-color: #ebebeb
+	display: flex
+	align-items: center
+	padding-left: 20px
+	padding-right: 20px
+
+.removeFile
+
+	width: 51px
+	height: 50px
+	background: url(../img/delete.png) no-repeat center, #ebebeb
+	border-left: 1px solid #a4a4a4
+	&:hover
+		background: url(../img/delete.png) no-repeat center, #d3d9df
 
 @import "media" // Always at the end
 

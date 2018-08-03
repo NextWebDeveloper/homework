@@ -25,6 +25,9 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" type="text/css" href="libs/fancybox/dist/jquery.fancybox.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/malihu/jquery.mCustomScrollbar.min.css">
+
+
 
 </head>
 
@@ -185,7 +188,7 @@
 										<span class="checkbox-custom"></span>
 										<span class="label">Комфорт тёплого пола</span>
 									</label>
-									<button class="hint hint_grey">?</button>
+									<button data-fancybox data-src="#hidden-content-1" class="hint hint_grey">?</button>
 								</div>
 							</div>
 							<!--Радиаторное отопление-->
@@ -204,7 +207,7 @@
 										<span class="checkbox-custom"></span>
 										<span class="label">Комфорт радиаторного отопления</span>
 									</label>
-									<button class="hint hint_grey">?</button>
+									<button data-fancybox data-src="#hidden-content-2" class="hint hint_grey">?</button>
 								</div>
 							</div>
 						</div>
@@ -215,6 +218,7 @@
 			<div class="section2__buttons">
 				<button class="addPlacement" id="addRoom">+ Добавить помещение</button>
 				<button class="addPlacement" id="addFloor">+ Добавить этаж</button>
+				<button class="addPlacement" id="button22">+ Добавить этаж</button>
 			</div>
 			<!--Форма выбора материала труб тёплого пола-->
 			<form action="#" class="pipeMaterial__form">
@@ -232,7 +236,7 @@
 				<div class="costBlock__separately">
 					<div class="cbSeparately__title">
 						<p>Стоимость</p>
-						<button class="hint hint_grey">?</button>
+						<button data-fancybox data-src="#hidden-content-3" class="hint hint_grey">?</button>
 					</div>
 					<div class="cbSeparately__position">
 						<p class="cbSeparately__name">
@@ -240,7 +244,8 @@
 						</p>
 						<div class="cbSeparately__separator"></div>
 						<div class="cbSeparately__valueOuter">
-							<span data-pos-cost="20000" class="cbSeparately__value">20000</span> руб.
+							<input type="text" class="inputValue" style="display: none;">
+							<span class="cbSeparately__value">0</span> руб.
 						</div>
 					</div>
 					<div class="cbSeparately__position">
@@ -249,7 +254,8 @@
 						</p>
 						<div class="cbSeparately__separator"></div>
 						<div class="cbSeparately__valueOuter">
-							<span class="cbSeparately__value" data-pos-cost="67000">67000</span> руб.
+							<input type="text" class="inputValue" style="display: none;">
+							<span class="cbSeparately__value">0</span> руб.
 						</div>
 					</div>
 					<div class="cbSeparately__position">
@@ -258,14 +264,15 @@
 						</p>
 						<div class="cbSeparately__separator"></div>
 						<div class="cbSeparately__valueOuter">
-							<span class="cbSeparately__value sec-instal-value" data-pos-cost="70000">70000</span> руб.
+							<input type="text" class="inputValue" style="display: none;">
+							<span class="cbSeparately__value sec-instal-value">0</span> руб.
 						</div>
 					</div>
 				</div>
 				<!--Итоговая стоимость-->
 				<div class="costBlock__total">
 					<p class="cbTotal__title">ИТОГО:</p>
-					<p class="cbTotal__total thousands-separator" data-total-price="">157000</p>
+					<p class="cbTotal__total">0</p>
 					<p class="cbTotal__measure">руб.</p>
 				</div>
 
@@ -287,7 +294,7 @@
 					<div class="secTitle__title">
 						<p>Горячее водоснабжение</p>
 					</div>
-					<button class="hint hint_blue">?</button>
+					<button data-fancybox data-src="#hidden-content-4" class="hint hint_blue">?</button>
 				</div>
 			</div>
 
@@ -322,7 +329,7 @@
 					<p class="choiceBlock__title">
 						Список рекомендованных <br> моделей
 					</p>
-					<div class="boilerList">
+					<div class="boilerList modelsList">
 						<div class="boilerList__block">
 							<button class="boilerList__checkbox"></button>
 							<div class="boilerList__definition">
@@ -347,6 +354,7 @@
 									<span>37000</span> руб.</div>
 							</div>
 						</div>
+						<button id="showMore1" class="showMore">Показать ещё</button>
 					</div>
 				</div>
 			</div>
@@ -410,7 +418,7 @@
 					<div class="secTitle__title">
 						<p>Котёл отопления</p>
 					</div>
-					<button class="hint hint_blue">?</button>
+					<button data-fancybox data-src="#hidden-content-5" class="hint hint_blue">?</button>
 				</div>
 			</div>
 
@@ -419,7 +427,7 @@
 				<div class="section34__choiceBlock">
 					<div class="choiceBlock__title">
 						Топливо
-						<button class="hint hint_grey">?</button>
+						<button data-fancybox data-src="#hidden-content-6" class="hint hint_grey">?</button>
 					</div>
 					<div class="choiceBlock__content boilerChoice">
 						<div class="boilerChoice__block">
@@ -485,7 +493,8 @@
 					<p class="choiceBlock__title">
 						Список рекомендованных <br> моделей
 					</p>
-					<div class="boilerList">
+					<!--Список котлов отопления. Классы от бойлеров-->
+					<div class="boilerList modelsList2">
 						<div class="boilerList__block">
 							<button class="boilerList__checkbox"></button>
 							<div class="boilerList__definition">
@@ -518,6 +527,57 @@
 									<span>40000</span> руб.</div>
 							</div>
 						</div>
+
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Медведь 20 PLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Медведь 20 PLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Медведь 20 PLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Медведь 20 PLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Медведь 20 PLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+						<div class="boilerList__block">
+							<button class="boilerList__checkbox"></button>
+							<div class="boilerList__definition">
+								<a href="#" target="_blank">Protherm Медведь 20 PLO</a>
+								<div class="boilerList__price">
+									<span>40000</span> руб.</div>
+							</div>
+						</div>
+
+						<button id="showMore2" class="showMore">Показать ещё</button>
 					</div>
 				</div>
 			</div>
@@ -708,15 +768,23 @@
 					<div class="secTitle__number">5</div>
 					<div class="secTitle__title">
 						<p>Реализация</p>
+
 					</div>
-					<button data-fancybox data-src="#hidden-content" href="javascript:;" class="hint hint_blue">?</button>
+					<button data-fancybox data-src="#hidden-content-8" class="hint hint_blue">?</button>
 				</div>
 			</div>
-			<form action="#" class="realisation__form">
-				<div class="realisation__files realisation__block">
-					<label class="label">Поэтажный план</label>
-					<input type="text" class="input">
+			<div class="realisation__files realisation__block" style="margin-top: 20px;">
+				<label class="label">Поэтажный план</label>
+				<div class="filesOuter">
+					<div id="files">
+
+					</div>
+					<button class="addFilesButton" onclick="addFile()">+ Добавить файлы</button>
 				</div>
+			</div>
+
+			<form action="#" class="realisation__form">
+
 				<div class="realisation__contacts">
 					<div class="realisation__contactPhone realisation__block">
 						<label class="label" for="contactPhone">Контактный телефон</label>
@@ -747,15 +815,115 @@
 			</p>
 	</main>
 
+
+
+<!--	<input type="file" name="upload" id="upload_hidden"
+				 style="position: absolute; display: block; overflow: hidden; width: 0; height: 0; border: 0; padding: 0;"
+				 onchange="document.getElementById('upload_visible').value = this.value;" />
+	<button onclick="document.getElementById('upload_hidden').click();">Обзор</button>
+
+	<form id="smartForm" action="" method=post enctype="multipart/form-data">
+		<input name="upl" type="file"/>
+		<input class="smartButton" type="submit" value="ОТПРАВИТЬ" name="submit"/>
+	</form>-->
+
 	<!-- Hidden advice blocks -->
-	<div style="display: none;" class="hiddenAdviceBlock" id="hidden-content">
-		<h5 class="hiddenAdviceBlock__title">Hello</h5>
-		<p class="hiddenAdviceBlock__text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati molestiae, nihil porro veritatis laborum voluptate ipsa repellat maiores ducimus inventore ipsum error modi, suscipit voluptas itaque asperiores ab esse dolores expedita saepe doloribus? Unde temporibus iste maiores quo consequatur enim saepe optio voluptatem, porro, totam hic veritatis repudiandae mollitia exercitationem facilis doloribus. Dolorum earum fugiat ipsam sunt qui? Eveniet deleniti perspiciatis a praesentium assumenda corrupti inventore laboriosam perferendis et, error incidunt asperiores voluptates atque mollitia, blanditiis animi debitis ipsa, alias natus unde eaque. Esse molestiae magni repudiandae neque impedit. Inventore veniam id dicta architecto dolorum cumque beatae eligendi officiis doloremque quod suscipit nihil, facilis consequatur quas accusamus quos ipsa expedita corrupti ipsum? Nulla temporibus repellat modi assumenda inventore reiciendis, magni minima quia quasi deserunt. Eveniet quae odit magni facere iste quaerat laudantium nobis qui voluptate. Eaque, voluptatibus soluta placeat, dicta hic saepe accusantium nihil cumque laboriosam a earum repudiandae ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur id debitis ad voluptate similique dolore? Nam suscipit reiciendis consequuntur quae magnam! Porro ab minima delectus voluptatem ducimus quisquam velit quod iste, pariatur temporibus deleniti quos in, cupiditate, eveniet tempora ullam dicta? Voluptates mollitia excepturi, asperiores placeat sint totam blanditiis vero. </p>
+	<div style="display: none;" class="hiddenAdviceBlock" id="hidden-content-1">
+		<p class="hiddenAdviceBlock__text">
+			*Зональное управление температурой теплого пола
+		</p>
 	</div>
 
+	<div style="display: none;" class="hiddenAdviceBlock" id="hidden-content-2">
+		<p class="hiddenAdviceBlock__text">
+			** Термоголовки для выставления температуры радиатора
+		</p>
+	</div>
+
+	<div style="display: none;" class="hiddenAdviceBlock" id="hidden-content-3">
+		<p class="hiddenAdviceBlock__text">
+			По умолчанию в качестве стандартного для теплого пола и радиаторного отопления заложено оборудование Rehau (Германия), Valtec (Италия) и Rifar (Россия). Инженерное оборудование этих брендов оптимально по соотношению цена-качество-удобство монтажа и обслуживания. При выборе иного бренда необходима консультация инженера.
+		</p>
+	</div>
+
+	<div style="display: none;" class="hiddenAdviceBlock mCustomScrollbar" data-mcs-theme="minimal-dark" id="hidden-content-4">
+		<h5 class="hiddenAdviceBlock__title">Как выбрать тип ГВС и объём бойлера.</h5>
+		<p class="hiddenAdviceBlock__text">
+			Горячее водоснабжение дома бывает двух типов: проточное и накопительное. <br>
+			<b>Проточная система</b> - наиболее простая и недорогая. Горячая вода нагревается прямо в котле при открытии крана.  Не требует дополнительного места для размещения оборудования. Ограничения проточной системы ГВС: если точка водоразбора находится далеко от котла, то задержка горячей воды нужной температуры может достигать от 5 до 15 сек. Температура горячей воды зависит количества одновременно открытых кранов. Ограничение по расходу ГВС 14 л/мин (комфортное принятие душа) при нагреве с 15 до 40 градусов и мощности котла 24 кВт.
+			<br>	<b>Накопительная система</b> - наиболее комфортная. Горячая вода накапливается в баке косвенного нагрева (бойлере).  Объем бойлера подбирают из расчета 50-60 литров на человека. Температура воды стабильна и не зависит от количества одновременно открытых кранов. Линия рециркуляции позволяет сократить время приготовления горячей воды до 1 сек.
+			<br>	Что выбрать: Калькулятор по умолчанию предлагает проточную систему (двухконтурный котел) при небольшой площади дома и умеренном потреблении горячей воды, накопительную систему (одноконтурный котел + бойлер) - для дома большой площади с повышенным водопотреблением.
+		</p>
+	</div>
+
+	<div style="display: none;" class="hiddenAdviceBlock mCustomScrollbar" data-mcs-theme="minimal-dark" id="hidden-content-5">
+		<h5 class="hiddenAdviceBlock__title">Как выбрать котел отопления.</h5>
+		<p class="hiddenAdviceBlock__text">
+			<b>Тип топлива.</b> По умолчанию калькулятор подбирает котлы отопления на газе и дизеле, при выборе иного топлива необходима консультация инженера для учета дополнительных нюансов.
+			<br>
+			<b>Бренд.</b> По умолчанию калькулятор предлагает Buderus (Германия), Vaillant (Германия), Baxi (Италия), Protherm (Словакия). Инженерное оборудование этих брендов оптимально по соотношению цена-качество-удобство монтажа и обслуживания. При выборе иного бренда необходима консультация инженера. Автоматика котла уточняется дополнительно.
+		</p>
+	</div>
+
+	<div style="display: none;" class="hiddenAdviceBlock" id="hidden-content-6">
+		<p class="hiddenAdviceBlock__text">
+			<b>Тип топлива.</b> По умолчанию калькулятор подбирает систему отопления на газе и дизеле, при выборе иного топлива необходима консультация инженера для учета дополнительных нюансов.
+		</p>
+	</div>
+
+	<div style="display: none;" class="hiddenAdviceBlock mCustomScrollbar" data-mcs-theme="minimal-dark" id="hidden-content-7">
+		<h5 class="hiddenAdviceBlock__title">Как выбрать дымоход.</h5>
+		<p class="hiddenAdviceBlock__text">
+			По умолчанию предлагается коаксиальный дымоход через стену. При выборе иного типа дымохода необходим дополнительный расчет на основе конкретных данных объекта.
+		</p>
+	</div>
+
+	<div style="display: none;" class="hiddenAdviceBlock mCustomScrollbar" data-mcs-theme="minimal-dark" id="hidden-content-8">
+		<h5 class="hiddenAdviceBlock__title">Отправить расчет менеджеру.</h5>
+		<p class="hiddenAdviceBlock__text">
+			После заполнения всех форм расчет будет отправлен менеджеру нашей компании, который свяжется с вами для уточнения деталей и оформления заказа.
+		</p>
+	</div>
+
+
+<!--Подключение скриптов	-->
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
-	<script src="js/scripts.min.js/script"></script>
+	<script src="libs/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+
+	<script>
+
+		function fileName(fullPath) {
+			return ('' + fullPath).replace(/^.*[\\\/]/, '');
+		}
+
+		$(function(){
+
+			$('#files').on('change', '[type="file"]', function(){
+				let cutFileNameBefore = $(this).val();
+				console.log(cutFileNameBefore);
+				let cutFileNameAfter = fileName(cutFileNameBefore);
+				$(this).parent().find('.nameFile').html(cutFileNameAfter);
+				// console.log
+			})
+
+			$('#files').on('click', '.removeFile', function(){
+				$(this).parent().remove()
+			})
+
+			$('#files').on('click', '.nameFile', function(){
+				$(this).parent().find('[type="file"]').click()
+			})
+
+		})
+
+		function addFile(){
+			$('<div class="userFile"><input type="file" name="file[]" value="" style="display:none"><div class="nameFile"></div><div class="removeFile"></div></div>')
+				.appendTo('#files').find('[type="file"]').click()
+		}
+	</script>
+
 </body>
 </html>
 
