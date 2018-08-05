@@ -2587,7 +2587,8 @@ select {
   margin-bottom: 10px; }
 
 .floor__room {
-  background-color: #ebebeb; }
+  background-color: #ebebeb;
+  margin-bottom: 10px; }
 
 .room__top {
   border-bottom: 1px solid #a4a4a4;
